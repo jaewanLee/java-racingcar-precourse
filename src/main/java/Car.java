@@ -26,12 +26,12 @@ public class Car {
         return this.name;
     }
 
-    public void printMoving() {
+    public String printMoving() {
         String movingString = "";
         for (int i = 0; i < this.moving; i++) {
             movingString += "-";
         }
-        System.out.println(this.name + " : " + movingString);
+        return this.name + " : " + movingString;
     }
 
     private boolean isGoCarAhead() {
