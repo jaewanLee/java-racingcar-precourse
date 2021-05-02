@@ -13,7 +13,18 @@ public class RacingCars {
         }
     }
 
-    
+    public String racing(int count) {
+        for (int i = 0; i < count; i++) {
+            this.doRacing();
+        }
+        int maxMoving = 0;
+        WinningCars winningCars = new WinningCars();
+        for (int i = 0; i < this.cars.size(); i++) {
+            maxMoving = this.isWinner(maxMoving, winningCars, this.cars.get(i));
+        }
+        return winningCars.winningMessage();
+    }
+
     private void doRacing() {
         for (Car car : this.cars) {
             car.goAhead();
@@ -33,6 +44,4 @@ public class RacingCars {
             winningCars.addCars(car);
         return maxMoving;
     }
-
-
 }
