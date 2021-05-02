@@ -14,4 +14,12 @@ public class RacingCars {
     }
 
 
+    private void doRacing() {
+        for (Car car : this.cars) {
+            car.goAhead();
+            System.out.println(car.printMoving());
+        }
+        System.out.println("");
+    }
+    
 }
