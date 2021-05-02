@@ -18,6 +18,14 @@ public class Car {
         }
     }
 
+    public int getMoving() {
+        return this.moving;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
     private boolean isGoCarAhead() {
         Integer randomValue = NumberUtils.getRandom();
         if (randomValue >= this.randomStandard.getValue()) {
