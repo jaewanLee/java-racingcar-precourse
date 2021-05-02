@@ -12,6 +12,12 @@ public class Car {
         this.moving = 0;
     }
 
+    public void goAhead() {
+        if (isGoCarAhead()) {
+            this.moving++;
+        }
+    }
+
     private boolean isGoCarAhead() {
         Integer randomValue = NumberUtils.getRandom();
         if (randomValue >= this.randomStandard.getValue()) {
