@@ -1,7 +1,7 @@
 public class Car {
     private String name;
     private int moving;
-
+    private Number randomStandard = new Number(4);
     private Number maxNameLength = new Number(5);
 
     public Car(String name) {
@@ -12,5 +12,11 @@ public class Car {
         this.moving = 0;
     }
 
-
+    private boolean isGoCarAhead() {
+        Integer randomValue = NumberUtils.getRandom();
+        if (randomValue >= this.randomStandard.getValue()) {
+            return true;
+        }
+        return false;
+    }
 }
