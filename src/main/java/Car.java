@@ -26,6 +26,14 @@ public class Car {
         return this.name;
     }
 
+    public void printMoving() {
+        String movingString = "";
+        for (int i = 0; i < this.moving; i++) {
+            movingString += "-";
+        }
+        System.out.println(this.name + " : " + movingString);
+    }
+
     private boolean isGoCarAhead() {
         Integer randomValue = NumberUtils.getRandom();
         if (randomValue >= this.randomStandard.getValue()) {
