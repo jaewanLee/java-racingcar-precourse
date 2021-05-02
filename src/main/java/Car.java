@@ -1,5 +1,5 @@
 public class Car {
-    private String name;
+    private Name name;
     private int moving;
     private Number randomStandard = new Number(4);
     private Number maxNameLength = new Number(5);
@@ -8,7 +8,7 @@ public class Car {
         if (name.length() > this.maxNameLength.getValue()) {
             throw new IllegalArgumentException("자동차 이름은 5글자 이하만 가능합니다.");
         }
-        this.name = name;
+        this.name = new Name(name);
         this.moving = 0;
     }
 
@@ -23,7 +23,7 @@ public class Car {
     }
 
     public String getName() {
-        return this.name;
+        return this.name.getName();
     }
 
     public String printMoving() {
